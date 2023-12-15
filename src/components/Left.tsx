@@ -1,5 +1,6 @@
 import "./Left.scss";
-import { ReactComponent as MyImage } from "../assets/gpt_image.svg";
+// import { ReactComponent as MyImage } from "../assets/gpt_image.svg";
+// import { Logo } from "./Logo";
 
 function Left({ chats, agents }) {
   return (
@@ -7,22 +8,27 @@ function Left({ chats, agents }) {
       <div className="main-left">
         <div className="main-left-top">
           <div className="logo">
-            <MyImage className="svg" />
+            {/* <MyImage /> */}
           </div>
           ChatGPT
         </div>
-        <h2> Agent List </h2>
-        <ul>
-          {agents.map((agent) => (
-            <li key={agent.agentId}>{agent.agentTitle}</li>
-          ))}
-        </ul>
-        <h2> Chat List </h2>
-        <ul>
-          {chats.map((chat) => (
-            <li key={chat.chatId}>{chat.chatTitle}</li>
-          ))}
-        </ul>
+        <div className="area">
+          <h3 className="title"> Yesterday </h3>
+          <ol>
+            {agents.map((agent) => (
+              <li key={agent.agentId}>{agent.agentTitle}</li>
+            ))}
+          </ol>
+        </div>
+        <div className="area">
+          <h3 className="title"> Previous 7 Days </h3>
+          <ol>
+            {chats.map((chat) => (
+              <li key={chat.chatId}>{chat.chatTitle}</li>
+            ))}
+          </ol>
+        </div>
+        
       </div>
     </>
   );

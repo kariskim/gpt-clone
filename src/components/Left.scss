@@ -39,4 +39,35 @@
 
     }
 
+    .area {
+        margin-top: 1.25rem;
+    }
+
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            position: relative;
+            height: auto;
+            cursor: pointer;
+            font-size: 0.875rem;
+            padding: 0.5rem;
+
+            &:hover {
+                background-color: rgba(gray, .2);
+                border-radius: 8px;
+            }
+
+        }
+
+    }
+
+    .title {
+        font-size: .75rem;
+        line-height: 1rem;
+        color: rgba(102, 102, 102, 1)
+    }
+
 }
