@@ -1,0 +1,42 @@
+.main-left {
+    padding-left: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    width: 260px;
+    border: 1px solid black;
+    overflow-y: auto;
+    height: 800px;
+
+    &-top {
+        position: sticky;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2.5rem;
+        margin-top: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: 10px;
+
+        &:hover {
+            background-color: rgba(gray, .2);
+            border-radius: 8px;
+        }
+
+        .logo {
+            background-color: white;
+            width : 1.75rem;
+            height: 1.75rem;
+
+            .svg {
+                width: 66.66%;
+                height: 66.66%;
+            }
+
+        }
+
+    }
+
+}
