@@ -1,6 +1,7 @@
 import "./App.scss";
 import Left from "./components/Left.tsx";
 import { ChatList, AgentList } from "../interfaces/interfaces.tsx";
+import Contents from "./components/Contents.tsx";
 
 function App() {
   const chats: ChatList[] = [
@@ -24,7 +25,7 @@ function App() {
     <>
       <div className="main">
         <Left chats={chats} agents={agents} />
-        <div className="main-content">Content Area</div>
+        <Contents conversations={["conversations 1", "conversations 2"]}/>
       </div>
     </>
   );
