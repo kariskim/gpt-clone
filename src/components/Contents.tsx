@@ -1,18 +1,27 @@
 import "./Contents.scss"
 
-interface ContentsProps {
-    conversations?: string[]
-}
+import {ContentsProps} from "../interfaces/interfaces.tsx";
+
+const cardInfos = [{
+    title: "Make a content strategy",
+    desc: "for an online merch store"
+}, {title: "Make a content strategy", desc: "for an online merch store"},{title: "Make a content strategy", desc: "for an online merch store"},{title: "Make a content strategy", desc: "for an online merch store"}]
+
 
 function generateContents(alreadyChatted: boolean, conversations: string[]) {
 
     if (alreadyChatted) {
-        return conversations.map(conversation => <div>{conversation}</div>)
+        return conversations.map(conversation => <div key={conversation}>{conversation}</div>)
     } else {
         return (
             <>
-                <div>How can I help today ?</div>
-                <div>Card area</div>
+                <div className="greeting"><h2>How can I help today ?</h2></div>
+                <div className="cards">
+                    {cardInfos.map(card => <div className="card" key={card.title}>
+                        <div className="title">{card.title}</div>
+                        <div className="desc">{card.desc}</div>
+                    </div>)}
+                </div>
             </>
         );
     }

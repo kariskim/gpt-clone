@@ -25,7 +25,8 @@ function App() {
     <>
       <div className="main">
         <Left chats={chats} agents={agents} />
-        <Contents conversations={["conversations 1", "conversations 2"]}/>
+        {/*<Contents conversations={["conversations 1", "conversations 2"]}/>*/}
+        <Contents conversations={[]}/>
       </div>
     </>
   );

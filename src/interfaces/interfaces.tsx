@@ -8,4 +8,8 @@ interface AgentList {
     agentTitle: string
 }
 
-export type { ChatList, AgentList }
+interface ContentsProps {
+    conversations?: string[]
+}
+
+export type { ChatList, AgentList, ContentsProps}

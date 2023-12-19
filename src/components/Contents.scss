@@ -2,7 +2,51 @@
 
     border: 1px solid black;
     height: 100%;
+    display: flex;
     flex-direction: column;  // 위에서 쌓기
     flex: 1 1 0;
+
+
+    .middle-area {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;  // 위에서 쌓기
+        justify-content: center;
+        align-items: center;
+
+        .greeting {
+
+            display: flex;
+            flex-direction: column;  // 위에서 쌓기
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 300px;
+
+        }
+
+        .cards {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            //grid-auto-flow: row;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0 130px;
+            box-sizing: border-box;
+
+            .card {
+                border: 1px solid black;
+                border-radius: 4px;
+                text-align: left;
+                padding: 5px;
+            }
+
+        }
+
+    }
+
+
 
 }
