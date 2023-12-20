@@ -6,6 +6,7 @@
 * Contents 레이아웃
 * 각 레이아웃 간 통신 
 * 반응형 처리 
+* SVG 처리 
 2. 전체 아키텍처 구축 
 * react-router 사용 
 * pinia 사용해서 state 하게 
