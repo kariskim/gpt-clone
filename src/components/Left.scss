@@ -26,14 +26,15 @@
         }
 
         .logo {
-            background-color: white;
-            width : 1.75rem;
+            position: relative;
+            color: #1a1a1a;
+            background-color: rgba(255,255,255, 1);
+            border-radius: 9999px;
+            width: 1.75rem;
             height: 1.75rem;
-
-            .svg {
-                width: 66.66%;
-                height: 66.66%;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
         }
 
@@ -68,6 +69,26 @@
         font-size: .75rem;
         line-height: 1rem;
         color: rgba(102, 102, 102, 1)
+    }
+
+    .w-2\/3 {
+        width: 66.666667%;
+    }
+
+    .h-2\/3 {
+        height: 66.666667%;
+    }
+
+    .gizmo:after {
+
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+        border-radius: 9999px;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
 }
