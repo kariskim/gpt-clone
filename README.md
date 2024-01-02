@@ -1,14 +1,15 @@
 # React + TypeScript + Vite
 
 1. 메인화면 구축
-* 전체 레이아웃 
-* left 레이아웃 
+* ~~전체 레이아웃~~ 
+* ~~left 레이아웃~~ 
 * Contents 레이아웃
 * 각 레이아웃 간 통신 
 * 반응형 처리 
 * SVG 처리 
 * useCallback 사용 
-* card - animation 효과 
+* ~~card - animation 효과~~
+* card - 넓이 더 작게 
 2. 전체 아키텍처 구축 
 * react-router 사용 
 * pinia 사용해서 state 하게 
