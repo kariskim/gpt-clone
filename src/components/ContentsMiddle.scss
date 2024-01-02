@@ -5,6 +5,7 @@
     flex-direction: column;  // 위에서 쌓기
     justify-content: center;
     align-items: center;
+    flex: 1 1 auto;  // fex-basis : 초기 크기
 
     .greeting {
 
@@ -14,6 +15,7 @@
         align-items: center;
         width: 100%;
         height: 300px;
+        margin-bottom: 200px;
 
 
         .icon {
