@@ -7,18 +7,47 @@
     flex: 1 1 0;
 
     .top-area {
-        font-weight: bold;
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-        cursor: pointer;
-        padding: 20px 20px;
+        
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        height: 3rem;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
 
 
-        svg {
-            color: #999;
-            margin-left: 5px;
+        .label-wrapper {
+
+            height: 100%;
+
+            .label {
+                width: 110px;
+                font-weight: bold;
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+                cursor: pointer;            
+            }
+
+            svg {
+                color: #999;
+                margin-left: 5px;
+            }
+    
+
+            &:hover {
+                background-color: rgba(247,247,248, 1);;
+                border-radius: 10px;
+            }
+
         }
 
+
+       
+
+        
+
+      
     }
 
 
