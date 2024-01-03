@@ -4,7 +4,7 @@
 * ~~전체 레이아웃~~ 
 * ~~left 레이아웃~~ 
 * Contents 레이아웃
-1) Top Dropdown => 모듈로 
+1) Top Dropdown => 모듈로 (React Portal 사용)
 2) card - 넓이 더 작게 
 3) 각 영역 스크롤 처리 
 4) 스크롤 내릴 때 더보기 버튼 
