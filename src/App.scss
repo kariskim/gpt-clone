@@ -31,3 +31,11 @@ html, body {
 .items-center {
   align-items: center;
 }
+
+
+.sticker-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(300px, 50px, 0);
+}
