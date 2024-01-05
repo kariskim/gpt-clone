@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate3d(300px, 50px, 0);
+    transform: translate3d(290px, 65px, 0);
     width: 338px;
     height: 253px;
     padding: 1.0rem;
@@ -24,10 +24,15 @@
       justify-content: space-between;
       flex: 1 1 auto;
 
+      &:hover {
+        background-color: rgba(0,0,0, .05);
+        border-radius: 5px;
+      }
 
       .desc {
         color: #999;
-
+        font-weight: lighter;
+        font-size: 13px;
 
         button {
           width: 100%;
@@ -43,6 +48,22 @@
         }
 
       }
+
+    }
+
+    .bottom {
+
+      width: 100%;
+      margin: 6px;      
+      padding: 10px;
+      gap: 0.5rem;    
+      border-top: 1px solid rgba(0,0,0, .05);
+
+      &:hover {
+        background-color: rgba(0,0,0, .05);
+        border-radius: 5px;
+      }
+
 
     }
 
