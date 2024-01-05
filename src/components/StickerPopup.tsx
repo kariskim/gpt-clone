@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ReactDOM from 'react-dom';
 import "./StickerPopup.scss"
 
@@ -7,13 +7,31 @@ const StickerPopup = ({ onClose }) => {
     // Portal을 위한 컨테이너 엘리먼트를 생성합니다.
     const portalContainer = document.createElement('div');
 
+    const popupRef = useRef(null);
+
+    // 팝업 외부를 클릭했을 때 팝업을 닫기 위한 이벤트 핸들러
+    const handleClickOutside = (event) => {
+        if (popupRef.current && !popupRef.current.contains(event.target)) {
+            closePopup();
+        }
+    };
+
+
     useEffect(() => {
     // body 밑에 portalContainer를 추가합니다.
     document.body.appendChild(portalContainer);
 
-    // 컴포넌트가 unmount될 때 컨테이너를 제거합니다.
+    // 전역 이벤트 리스너를 추가하여 팝업 외부 클릭 감지
+    document.addEventListener('mousedown', handleClickOutside);
+
+    
     return () => {
+        
+        // 컴포넌트가 unmount될 때 컨테이너를 제거합니다.
         document.body.removeChild(portalContainer);
+
+        // 컴포넌트가 unmount될 때 이벤트 리스너 제거
+        document.removeEventListener('mousedown', handleClickOutside);
     };
     }, [portalContainer]);
 
@@ -29,7 +47,7 @@ const StickerPopup = ({ onClose }) => {
   
     return ReactDOM.createPortal(
         isOpen && (
-          <div className="sticker-popup flex flex-column">
+          <div ref={popupRef} className="sticker-popup flex flex-column">
             <div className="top flex items-center">
                 <div className="flex items-center gap-3">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-md"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.2406 3.48592C15.2405 3.48652 15.2403 3.48713 15.2402 3.48773L14.1838 8.00525H20.0071C21.7333 8.00525 22.6031 10.0263 21.5255 11.3049L21.5232 11.3076L12.2148 22.2732C12.2144 22.2737 12.214 22.2743 12.2135 22.2748C10.8154 23.9308 8.29078 22.4977 8.75937 20.5141C8.75951 20.5135 8.75965 20.5129 8.75979 20.5123L9.81614 15.9948H3.99288C2.26668 15.9948 1.39687 13.9737 2.47446 12.6951L2.47674 12.6924L11.7851 1.7268C11.7856 1.72628 11.786 1.72577 11.7864 1.72526C13.1845 0.0691769 15.7092 1.50223 15.2406 3.48592ZM13.2906 3.04211L11.9496 8.77683C11.8802 9.07364 11.9503 9.38587 12.14 9.62465C12.3297 9.86343 12.6182 10.0026 12.9234 10.0026H19.9972C19.9985 10.0058 19.9993 10.0088 19.9997 10.0113C19.9998 10.0118 19.9998 10.0123 19.9999 10.0127C19.9991 10.0139 19.9979 10.0156 19.9959 10.018C19.9957 10.0182 19.9956 10.0184 19.9954 10.0187L10.7094 20.9579L12.0504 15.2232C12.1198 14.9264 12.0497 14.6141 11.86 14.3754C11.6703 14.1366 11.3818 13.9974 11.0766 13.9974H4.00279C4.0015 13.9942 4.00069 13.9912 4.00029 13.9887C4.0002 13.9882 4.00013 13.9877 4.00009 13.9873C4.00083 13.9861 4.00209 13.9844 4.00407 13.982C4.00424 13.9818 4.00442 13.9816 4.00459 13.9813L13.2906 3.04211Z" fill="currentColor"></path></svg>
