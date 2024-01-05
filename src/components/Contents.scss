@@ -35,6 +35,11 @@
             }
     
 
+            &.active {
+                background-color: rgba(247,247,248, 1);;
+                border-radius: 10px;
+            }
+
             &:hover {
                 background-color: rgba(247,247,248, 1);;
                 border-radius: 10px;
