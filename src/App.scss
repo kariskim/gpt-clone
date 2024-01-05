@@ -16,6 +16,10 @@ html, body {
 
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -28,6 +32,22 @@ html, body {
   display: flex;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
