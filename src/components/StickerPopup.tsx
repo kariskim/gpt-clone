@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom';
+import "./StickerPopup.scss"
 
 const StickerPopup = ({ onClose }) => {
 

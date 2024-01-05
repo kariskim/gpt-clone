@@ -1,0 +1,13 @@
+.sticker-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate3d(300px, 50px, 0);
+    width: 338px;
+    height: 200px;
+
+    // --tw-shadow: 0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+    border-radius: 10px;
+
+  }
